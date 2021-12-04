@@ -1,0 +1,146 @@
+/button<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+  </head>
+  <body>
+
+<div class="container">
+  <nav>
+
+
+  <div class="logo">
+    <ul>
+      Article
+    </ul>
+
+  </div>
+
+
+
+
+  <ul>
+
+    <li><span>Sign in</span></li>
+  </ul>
+  </nav>
+</div>
+
+
+
+
+
+
+    <form class="" action="site.php" method="post">
+
+
+
+
+
+
+<!----------- here goes editable lines for user------------------------->
+
+
+<div class="textedit"  id="category" contenteditable=true data-text="Category - e.g. Technical, Science, etc."></div>
+
+<div class="textedit"  id="title" contenteditable=true data-text="Title"></div>
+
+<div class="textedit"  id="tag" contenteditable=true data-text="Tagline"></div>
+
+
+
+
+
+
+<div class="tools">
+ <input id="colorpick" type="color" value="#ffffff">
+
+  <input id="myrange" type="number" max="100" min="1" value="15">
+    <span id="displayfontsize"></span> <br>
+  <span id="changecolorr"></span>
+
+  </div>
+
+
+
+<div class="textedit1" id="para" contenteditable=true data-text="Write Article here" onclick = "colortext()"></div>
+
+
+
+
+  <input type="submit" name="submit" value="Submit">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <input type="hidden" id="cat" autocomplete="off" name="category" value="">
+
+
+   <input type="hidden" id="tit" autocomplete="off" name="title" value="">
+
+
+<input type="hidden" id="tagg" autocomplete="off" name="tag" value="">
+
+
+<textarea hidden="hidden" id="changecolor" class="textpara" name="para"></textarea>
+
+
+
+
+
+  </form>
+
+
+<script>
+  var category = document.getElementById("category").value;
+document.getElementById("cat").value = category;
+
+var title = document.getElementById("title").value;
+document.getElementById("tit").value = title;
+
+var tagline = document.getElementById("tag").value;
+document.getElementById("tagg").value = tagline;
+
+
+
+
+
+
+
+
+
+var paraa = document.getElementById("para").innerHTML;
+document.getElementById("changecolorr").innerHTML = paraa;
+
+
+
+
+function colortext(){
+document.getElementById("changecolorr").innerHTML = paraa;
+
+}
+
+
+
+</script>
+
+
+  </body>
+</html>
